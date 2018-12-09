@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div id="app">
+    <input type="text" v-model="newTodo">
+    <button @click="addTodo">add todo</button>
+
+    <h1>Todos:</h1>
+    <ul>
+        <todo
+            v-for="(todo, index) in todos"
+            :todo="todo"
+            :key="index"
+            @toggle="toggleTodo"
+        ></todo>
+    </ul>
+    New Todo: {{ newTodo }} <br>
+    Reversed Todo: {{ reverseNewTodo }}
+
+    <h1>Not Done Todos:</h1>
+
+    <ul>
+        <todo
+            v-for="(todo, index) in notDoneTodos"
+            :todo="todo"
+            :key="index"
+            @toggle="toggleTodo"
+        ></todo>
+    </ul>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+<script>
+    Vue.component('todo', {
+        props: {
+            todo: {
+                type: Object,
+                required: true,
+            }
+        },
+        template: `
+        <li>
+            {{ todo.title }}
+            ({{ todo.done ? 'Yep!' : 'Nah!' }})
+            <button @click="$emit('toggle', todo)">
+                toggle
+            </button>
+        </li>
+        `
+    });
+
+    var app = new Vue({
+        el: '#app',
+        data() {
+            return {
+                newTodo: '',
+                todos: [
+                    {
+                        title: 'grazjs 25 introduction',
+                        done: true
+                    },
+                    {
+                        title: 'talk about reactivity',
+                        done: false
+                    },
+                    {
+                        title: 'talk about components',
+                        done: false
+                    }
+                ]
+            }
+        },
+        computed: {
+            reverseNewTodo() {
+                return this.newTodo.split('').reverse().join('');
+            },
+            notDoneTodos() {
+                let notDoneTodos = [];
+                this.todos.forEach(function (todo) {
+                    if (!todo.done) {
+                        notDoneTodos.push(todo);
+                    }
+                });
+                return notDoneTodos;
+            }
+        },
+        methods: {
+            addTodo() {
+                this.todos.push({
+                    title: this.newTodo,
+                    done: false
+                });
+                this.newTodo = '';
+            },
+            toggleTodo(todo) {
+                todo.done = !todo.done;
+            }
+        }
+    });
+</script>
+
+</body>
+</html>
