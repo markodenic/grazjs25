@@ -7,7 +7,7 @@
 
           <h3>Presentation slides:</h3>
 
-          <a href="https://docs.google.com/presentation/d/1vItGIyJ3TkTDv0qZS5emJC4Uvl8pcwDZeGO4cz-mDMw/edit?usp=sharing">https://docs.google.com/presentation/d/1vItGIyJ3TkTDv0qZS5emJC4Uvl8pcwDZeGO4cz-mDMw/edit?usp=sharing</a><br>
+          <a href="https://docs.google.com/presentation/d/1Z9DEVHpRHX6mLlfRv9nzzMz2hmgCI9aLzWqV1wz7OZU/edit?usp=sharing">https://docs.google.com/presentation/d/1Z9DEVHpRHX6mLlfRv9nzzMz2hmgCI9aLzWqV1wz7OZU/edit?usp=sharing</a><br>
 
           <h3>Presentation code:</h3>
 
@@ -16,9 +16,9 @@
           <h3>Social:</h3>
 
           <p>
-              <strong>Linkedin:</strong> <a href="https://www.linkedin.com/in/marko-denic-75b3b0a4/">https://www.linkedin.com/in/marko-denic-75b3b0a4/</a><br>
-              <strong>Xing:</strong> <a href="https://www.xing.com/profile/Marko_Denic3">https://www.xing.com/profile/Marko_Denic3</a> <br>
-              <strong>Twitter:</strong> <a href="https://twitter.com/denicmarko">https://twitter.com/denicmarko</a><br>
+              <strong>Linkedin: </strong> <a href="https://www.linkedin.com/in/marko-denic-75b3b0a4/">https://www.linkedin.com/in/marko-denic-75b3b0a4/</a><br>
+              <strong>Xing: </strong> <a href="https://www.xing.com/profile/Marko_Denic3">https://www.xing.com/profile/Marko_Denic3</a> <br>
+              <strong>Twitter: </strong> <a href="https://twitter.com/denicmarko">https://twitter.com/denicmarko</a><br>
           </p>
       </el-col>
   </el-row>
