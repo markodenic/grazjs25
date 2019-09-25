@@ -33,7 +33,7 @@
             return {
                 dialogVisible: false,
                 form: {
-                    name: '',
+                    title: '',
                     done: false,
                     description: ''
                 }
