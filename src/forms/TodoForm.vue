@@ -5,13 +5,21 @@
         :before-close="handleClose"
         class="todo-form"
     >
-        <el-form ref="form" :model="form" label-position="top" @submit.native.prevent>
+        <el-form
+            ref="form"
+            :model="form"
+            label-position="top"
+            @submit.native.prevent
+        >
             <el-form-item label="Title">
-                <el-input v-model="form.title" />
+                <el-input v-model="form.title"/>
             </el-form-item>
 
             <el-form-item label="Description">
-                <el-input type="textarea" v-model="form.description" />
+                <el-input
+                    type="textarea"
+                    v-model="form.description"
+                />
             </el-form-item>
 
             <el-form-item label="Done">
@@ -20,8 +28,15 @@
         </el-form>
 
         <span slot="footer" class="dialog-footer">
-            <el-button @click="handleClose">Cancel</el-button>
-            <el-button type="primary" @click="submit">Confirm</el-button>
+            <el-button @click="handleClose">
+                Cancel
+            </el-button>
+            <el-button
+                type="primary"
+                @click="submit"
+            >
+                Confirm
+            </el-button>
         </span>
     </el-dialog>
 </template>

@@ -1,10 +1,24 @@
 <template>
     <div class="home">
-        <el-button type="primary" @click="showTodoForm">add todo</el-button>
+        <el-button
+            type="primary"
+            @click="showTodoForm">
+            add todo
+        </el-button>
 
-        <el-row type="flex" justify="center">
-            <el-col class="home__todos-wrapper" :xs="22" :sm="12" :d="8">
-                <h1>Todos:</h1>
+        <el-row
+            type="flex"
+            justify="center"
+        >
+            <el-col
+                :xs="22"
+                :sm="12"
+                :md="8"
+                class="home__todos-wrapper"
+            >
+                <h1>
+                    Todos:
+                </h1>
 
                 <ul>
                     <todo
@@ -17,9 +31,19 @@
             </el-col>
         </el-row>
 
-        <el-row type="flex" justify="center">
-            <el-col class="home__todos-wrapper" :xs="22" :sm="12" :md="8">
-                <h1 v-if="notDoneTodos.length > 0">Not Done Todos:</h1>
+        <el-row
+            type="flex"
+            justify="center"
+        >
+            <el-col
+                class="home__todos-wrapper"
+                :xs="22"
+                :sm="12"
+                :md="8"
+            >
+                <h1 v-if="notDoneTodos.length > 0">
+                    Not Done Todos:
+                </h1>
 
                 <h1 v-else>
                     Hurray! All done!

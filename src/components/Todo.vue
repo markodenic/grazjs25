@@ -1,13 +1,27 @@
 <template>
     <li class="todo">
-        <el-row type="flex" align="middle">
-            <el-col class="todo__content" :xs="16" :sm="20">
-                {{ todo.title }}
-                ({{ todo.done ? 'Yep!' : 'Nah!' }})
+        <el-row
+            type="flex"
+            align="middle"
+        >
+            <el-col
+                :xs="16"
+                :sm="20"
+                class="todo__content"
+            >
+                {{ todo.title }} ({{ todo.done ? 'Yep!' : 'Nah!' }})
             </el-col>
 
-            <el-col class="todo__actions" :xs="8" :sm="4">
-                <el-button size="small" type="success" @click="$emit('toggle', todo)">
+            <el-col
+                class="todo__actions"
+                :xs="8"
+                :sm="4"
+            >
+                <el-button
+                    size="small"
+                    type="success"
+                    @click="$emit('toggle', todo)"
+                >
                     toggle
                 </el-button>
             </el-col>
