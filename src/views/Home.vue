@@ -131,6 +131,7 @@
 
 <style lang="less">
     .home {
+        flex: 1;
         &__todos-wrapper {
             max-width: 450px;
         }
